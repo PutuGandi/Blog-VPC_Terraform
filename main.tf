@@ -10,7 +10,7 @@ resource "aws_vpc" "gandi" {
     }
 }
 
-#Create Public Subnet
+#Create Private Subnet
 resource "aws_subnet" "private" {
     count                   = length(var.private_subnets)
     vpc_id                  = aws_vpc.gandi.id
